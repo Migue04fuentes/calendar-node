@@ -21,7 +21,7 @@ app.engine('.hbs', exphbs.engine({
 app.set('view engine', '.hbs');
 // Middlewares
 app.use(morgan('dev'));
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({extended: false}));  //Entender los datos que llegan de html
 
 
 //Variables globales

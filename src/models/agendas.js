@@ -11,6 +11,10 @@ const agendaschema = new Schema({
     description: {
         type: String,
         required: true
+    },
+    fecha: {
+        type: String,
+        required: 'required fecha'
     }
 },{
  //   timestamps: true   //fecha de creación y actulización

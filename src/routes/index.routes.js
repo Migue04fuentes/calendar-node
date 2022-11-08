@@ -5,12 +5,15 @@ const router = Router();
 // Importación de funciones del Controllers
 const { renderIndex,
         newagenda,
+        rendercitas,
       } = require('../controllers/index.controller');
 
 // funciones de rutas
 router.get('/', renderIndex);
 
-router.post('/index/newagenda', newagenda);
+router.post('/index/newcita', newagenda);
+
+router.get('/allcitas', rendercitas);
 
 
 

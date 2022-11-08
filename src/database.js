@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
 //Importaciones de variables de entorno
-const { MONGODB_HOST, MONGODE_DATABASE} = process.env;
+const { MONGODB_HOST, MONGODB_DATABASE} = process.env;
 
 //URL de conexión
-const MONGODB_URI = `mongodb://${MONGODB_HOST}/${MONGODE_DATABASE}`;
+const MONGODB_URI = `mongodb://${MONGODB_HOST}/${MONGODB_DATABASE}`;
 
 //Conexión base de datos
 mongoose.connect(MONGODB_URI, {
