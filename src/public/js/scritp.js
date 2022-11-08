@@ -6,12 +6,14 @@ function addZero(i) {
     return i;
 }
 
+//Días
 var hoy = new Date();
 var dd = hoy.getDate();
 if (dd < 10) {
     dd = '0' + dd;
 }
 
+//Meses
 if (mm < 10) {
     mm = '0' + mm;
 }
@@ -130,12 +132,30 @@ $(document).ready(function () {
                 textColor: '#ffffff',
             }
         ],
+        //Click para agregar cita
         dayClick: function (date, jsEvent, view) {
             $('#exampleModal').modal('show');
-            console.log(date.format());
-            console.log(date.day() + "  " + date.year() + "  " + (parseInt(date.month()) + 1));
-            document.getElementById('fecha').value = date.format();// alert('Has hecho click en: ' + date.format());
+            // console.log(date.format());
+            // console.log(date);
+
+            //Fecha
+            let fechaparcial = date.format().substr(0, 10);
+            
+
+            //Hora Inicial
+            let hora = date.hour();
+            let min = date.minutes();
+            if (hora < 10) {
+                hora = '0' + hora;
+            }
+            if (min < 10) {
+                min = '0' + min;
+            }
+            let horainicial = hora + ':' + min;
+            document.getElementById('fecha').value = fechaparcial;// alert('Has hecho click en: ' + date.format());
+            document.getElementById('hora').value = horainicial;
         },
+        //click en cita asignada
         eventClick: function (calEvent, jsEvent, view) {
             $('#event-title').text(calEvent.title);
             $('#event-description').html(calEvent.description);
@@ -153,9 +173,9 @@ btnguardarcita.addEventListener("click", function () {
     let fecha = document.getElementById('fecha').value;
     lista.push({
         title: inputdoctor,
-        description: inputdescription, 
+        description: inputdescription,
         start: fecha
-    }); 
+    });
     console.log(lista);
 });
 

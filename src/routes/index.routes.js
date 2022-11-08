@@ -11,7 +11,7 @@ const { renderIndex,
 // funciones de rutas
 router.get('/', renderIndex);
 
-router.post('/index/newcita', newagenda);
+router.post('/', newagenda);
 
 router.get('/allcitas', rendercitas);
 

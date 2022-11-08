@@ -2609,13 +2609,13 @@ var util_1 = __webpack_require__(4);
 exports.globalDefaults = {
     titleRangeSeparator: ' \u2013 ',
     monthYearFormat: 'MMMM YYYY',
-    defaultTimedEventDuration: '02:00:00',
+    defaultTimedEvsentDuration: '02:00:00',
     defaultAllDayEventDuration: { days: 1 },
     forceEventDuration: false,
     nextDayThreshold: '09:00:00',
     // display
     columnHeader: true,
-    defaultView: 'month',
+    defaultView: 'agendaWeek',
     aspectRatio: 1.35,
     header: {
         left: 'title',

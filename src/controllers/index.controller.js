@@ -10,8 +10,8 @@ indexCtrl.renderIndex = (req, res) => {
 
 //Guardar cita
 indexCtrl.newagenda = async (req, res) => {
-    const { namedoctor, description, fecha } = req.body;
-    const newagenda = new agenda({ title: namedoctor, description, fecha: fecha });
+    const { namedoctor, description, fecha , hora} = req.body;
+    const newagenda = new agenda({ title: namedoctor, description, fecha: fecha, hora});
     await newagenda.save();
     res.render('index');
 };
