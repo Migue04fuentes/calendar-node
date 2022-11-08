@@ -3,7 +3,7 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const path = require('path');
-
+const morgan = require('morgan');  //Ver peticiones que llegan al servidor
 
 //Inicialización
 //servidor
@@ -20,6 +20,7 @@ app.engine('.hbs', exphbs.engine({
 }));
 app.set('view engine', '.hbs');
 // Middlewares
+app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false}));
 
 
@@ -28,6 +29,7 @@ app.use(express.urlencoded({extended: false}));
 
 //Rutas
 app.use(require('./routes/index.routes'));
+app.use(require('./routes/agenda.routes'));
 
 //Archivos Estáticos
 app.use(express.static(path.join(__dirname, 'public')));

@@ -1,11 +1,16 @@
-const {Router} = require('express');
+const { Router } = require('express');
 const app = require('../server');
 const router = Router();
 
+// Importación de funciones del Controllers
+const { renderIndex,
+        newagenda,
+      } = require('../controllers/index.controller');
 
-router.get('/', (req,res) =>{
-    res.render('index');
-})
+// funciones de rutas
+router.get('/', renderIndex);
+
+router.post('/index/newagenda', newagenda);
 
 
 

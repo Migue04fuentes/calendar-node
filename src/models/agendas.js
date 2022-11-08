@@ -2,6 +2,7 @@
 const {Schema, model} = require('mongoose');
 
 
+// Esquema de guardado de datos
 const agendaschema = new Schema({
     title: {
         type :String,

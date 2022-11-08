@@ -39,22 +39,23 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form action="/index/newagenda" method="post">
                         <input type="text" id="fecha">
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">Doctor</label>
-                            <input type="text" class="form-control" id="namedoctor">
+                            <input type="text" class="form-control" name="namedoctor" id="namedoctor">
                         </div>
                         <div class="form-group">
                             <label for="message-text" class="col-form-label">Message:</label>
-                            <input class="form-control" id="description">
+                            <input class="form-control" name="description" id="description">
+                        </div>
+
+                        <div class="form-group">
+                            {{!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            --}}
+                            <button class="btn btn-primary" id="btn_guardar_cita">Guardar</button>
                         </div>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary" id="btn_guardar_cita"
-                        data-dismiss="modal">Guardar</button>
                 </div>
             </div>
         </div>
