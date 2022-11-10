@@ -31,7 +31,7 @@ app.use(express.urlencoded({extended: false}));  //Entender los datos que llegan
 //Rutas
 app.use(require('./routes/index.routes'));
 app.use(require('./routes/agenda.routes'));
-
+app.use(require('./routes/user.routes'));
 //Archivos Estáticos
 app.use(express.static(path.join(__dirname, 'public')));
 

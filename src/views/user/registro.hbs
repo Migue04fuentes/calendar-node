@@ -1,0 +1,52 @@
+<div class="wm_signup_container">
+    <div class="wm_signup_titulo">
+        <p>Registro-Primera Cita</p>
+    </div>
+    <div class="wm_signup_card">
+        <form action="/registrar" method="post">
+            <div class="wm_signup_input">
+                <label for="wm_signup_tdocument">Tipo de documento</label>
+                <select name="wm_signup_tdocument" id="wm_signup_tdocument">
+                    <option value="cedula">Cédula</option>
+                    <option value="tarjeta-identidad">Tarjeta de Identidad</option>
+                    <option value="registro">Registro</option>
+                </select>
+            </div>
+            <div class="wm_signup_input">
+                <label for="wm_signup_cedula">Cédula:</label>
+                <input type="text" name="wm_signup_cedula" id="wm_signup_cedula" placeholder="Cédula">
+            </div>
+            <div class="wm_signup_input">
+                <label for="wm_signup_nombre">Nombres:</label>
+                <input type="text" name="wm_signup_nombre" id="wm_signup_nombre" placeholder="Primer nombre">
+            </div>
+            <div class="wm_signup_input">
+                <label for="wm_signup_apellido">Apellidos:</label>
+                <input type="text" name="wm_signup_apellido" id="wm_signup_apellido" placeholder="Primer nombre">
+            </div>
+            <div class="wm_signup_input">
+                <label for="wm_sign_up">Télefono:</label>
+                <input type="text" name="wm_signup_telefono" id="wm_signup_telefono" placeholder="Teléfono">
+            </div>
+            <div class="wm_signup_input">
+                <label for="wm_signup_aseguradora">Aseguradora:</label>
+                <select name="wm_signup_aseguradora" id="wm_signup_aseguradora">
+                    <option value="mutualser">Mutualser</option>
+                    <option value="colpatria">Colpatria</option>
+                    <option value="sanitas">Sanitas</option>
+                    <option value="colsanitas">colsanitas</option>
+                </select>
+            </div>
+            <div class="wm_signup_input">
+                <label for="wm_signup_especialidad">Especialidad:</label>
+                <select name="wm_signup_especialidad" id="wm_signup_aseguradora">
+                    <option value="Optometria">Optometría</option>
+                    <option value="Oftalmologia">Oftalmología</option>
+                    <option value="ortopedia">Ortopedia</option>
+                    <option value="cirugia">cirugia</option>
+                </select>
+            </div>
+            <button>Guardar</button>
+        </form>
+    </div>
+</div>
