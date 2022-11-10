@@ -19,6 +19,7 @@ app.engine('.hbs', exphbs.engine({
     extname: '.hbs'
 }));
 app.set('view engine', '.hbs');
+
 // Middlewares
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false}));  //Entender los datos que llegan de html
