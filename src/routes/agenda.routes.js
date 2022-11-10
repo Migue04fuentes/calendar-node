@@ -15,7 +15,7 @@ const {
 //Agregar cita
 router.get('/agenda/add', agendaform);
 
-router.post('/agenda/add-cita', newcita);
+router.post('/newcita', newcita);
 
 //mostrar todas la citas
 router.get('/agenda', rendercitas);
