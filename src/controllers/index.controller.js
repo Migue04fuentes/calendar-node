@@ -15,7 +15,7 @@ indexCtrl.newagenda = async (req, res) => {
 
 //mostrando citas
 indexCtrl.rendercitas = async(req, res) => {
-    const citas = await agenda.find();
+    const citas = await user.find();
     res.send(citas);
 }
 

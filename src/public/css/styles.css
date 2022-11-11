@@ -204,10 +204,18 @@ html,body{
 /* Mensaje de usuario */
 .wm_signup_msg{
     width: 320px;
-    height: 30px;
+    height: 40px;
     text-align: center;
-    background-color:  rgb(254, 110, 110);
+    align-items: center;
+    color: #664d03;
+    background-color: #fff3cd;
+    border-color: #ffecb5;
     border-radius: 5px;
+}
+
+.wm_signup_msg:first-child{
+    margin: 0;
+    padding: 8px 0 0 0;
 }
 
 /* Contenedor general dentro de form */
