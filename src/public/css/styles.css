@@ -201,17 +201,26 @@ html,body{
     border-bottom: 1px solid #000;
 }
 
+/* Mensaje de usuario */
+.wm_signup_msg{
+    width: 320px;
+    height: 30px;
+    text-align: center;
+    background-color:  rgb(254, 110, 110);
+    border-radius: 5px;
+}
+
 /* Contenedor general dentro de form */
 .wm_signup_container form .wm_signup_form{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    /* justify-content: space-around; */
     margin: 20px 0 12px 0;
 }
 
 /* contenedor de input y label */
 form .wm_signup_form .wm_signup_input{
-    margin-bottom: 15px;
+    margin: 0 20px 15px 0;
     width: calc(100% / 2 -20px);
 }
 

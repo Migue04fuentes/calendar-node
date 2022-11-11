@@ -3,6 +3,9 @@
         <p>Registro-Primera Cita</p>
     </div>
     <form action="/registrar" method="post">
+        <div class="wm_signup_msg">
+            <p>¡Su usuario será su número de documento!</p>
+        </div>
         <div class="wm_signup_form">
             <div class="wm_signup_input">
                 <label class="wm_signup_label" for="wm_signup_tdocument">Tipo de documento</label>
@@ -13,16 +16,18 @@
                 </select>
             </div>
             <div class="wm_signup_input">
-                <label class="wm_signup_label" for="wm_signup_cedula">Cédula:</label>
+                <label class="wm_signup_label" for="wm_signup_cedula">Nro. Documento:</label>
                 <input type="text" name="wm_signup_cedula" id="wm_signup_cedula" placeholder="Cédula" required="">
             </div>
             <div class="wm_signup_input">
                 <label class="wm_signup_label" for="wm_signup_nombre">Nombres:</label>
-                <input type="text" name="wm_signup_nombre" id="wm_signup_nombre" placeholder="Primer nombre" required="">
+                <input type="text" name="wm_signup_nombre" id="wm_signup_nombre" placeholder="Primer nombre"
+                    required="">
             </div>
             <div class="wm_signup_input">
                 <label class="wm_signup_label" for="wm_signup_apellido">Apellidos:</label>
-                <input type="text" name="wm_signup_apellido" id="wm_signup_apellido" placeholder="Primer nombre" required="">
+                <input type="text" name="wm_signup_apellido" id="wm_signup_apellido" placeholder="Primer nombre"
+                    required="">
             </div>
             <div class="wm_signup_input">
                 <label class="wm_signup_label" for="wm_sign_up">Télefono:</label>
@@ -38,18 +43,27 @@
                 </select>
             </div>
             <div class="wm_signup_input">
-                <label class="wm_signup_label" for="wm_signup_especialidad">Especialidad:</label>
-                <select name="wm_signup_especialidad" id="wm_signup_aseguradora">
-                    <option value="Optometria">Optometría</option>
-                    <option value="Oftalmologia">Oftalmología</option>
-                    <option value="ortopedia">Ortopedia</option>
-                    <option value="cirugia">cirugia</option>
-                </select>
+                <label class="wm_signup_label" for="wm_sign_up">Contraseña:</label>
+                <input type="password" name="wm_signup_password" id="wm_signup_password" placeholder="Contraseña"
+                    required="Password">
+            </div>
+            <div class="wm_signup_input">
+                <label class="wm_signup_label" for="wm_sign_up">Confirmar Contraseña:</label>
+                <input type="password" name="wm_signup_confirmpass" id="wm_signup_confirmpass"
+                    placeholder="Confirmar contraseña" required="Password">
             </div>
         </div>
-
+        <div class="wm_signup_input">
+            <label class="wm_signup_label" for="wm_signup_especialidad">Especialidad:</label>
+            <select name="wm_signup_especialidad" id="wm_signup_aseguradora">
+                <option value="Optometria">Optometría</option>
+                <option value="Oftalmologia">Oftalmología</option>
+                <option value="ortopedia">Ortopedia</option>
+                <option value="cirugia">cirugia</option>
+            </select>
+        </div>
         <div class="wm_signup_button">
-            <button>Guardar</button>
+            <button>Registrarse</button>
         </div>
     </form>
 </div>

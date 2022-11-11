@@ -27,6 +27,7 @@ userCtrl.saveregistro = async (req, res) => {
     });
 
     await usuario.save();
+    req.flash('user_msg', 'Registro Exitoso');
     res.render('index');
 }
 

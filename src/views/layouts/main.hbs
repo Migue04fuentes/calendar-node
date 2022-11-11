@@ -19,9 +19,13 @@
 </head>
 
 <body>
-    
-    {{{body}}}
+    <main class="container p-5">
+        {{!-- Partials --}}
+        {{>messages}}
 
+        {{!-- Layaouts --}}
+        {{{body}}}
+    </main>
     <script src="/js/sweetalert2@11.js"></script>
     <script src="/js/scritp.js"></script>
 </body>
