@@ -1,9 +1,8 @@
 <div class="container">
     {{!-- Login --}}
     <div class="login-container">
-        <div id="output"></div>
-        <div class="avatar">
-            <img src="myAvatar.png" alt="Miguel Ramírez">
+        <div class="wm_signin_titulo">
+            <span>Login</span>
         </div>
         <div class="form-box">
             <form action="/" method="post">
@@ -32,10 +31,12 @@
                 <div>
                     <a href="#">¿Olvidaste tu contraseña?</a>
                 </div>
-                <button class="btn btn-info btn-block login" type="submit">Login</button>
+                <div class="wm_signin_button">
+                    <button class="login" type="submit">Login</button>
+                </div>
             </form>
 
-            <div>
+            <div class="wm_signin_registro">
                 <a href="/registro">¿No te has registrado aún?</a>
             </div>
         </div>

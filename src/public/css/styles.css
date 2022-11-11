@@ -47,48 +47,21 @@ html,body{
 /* Contenedor de login */
 .login-container{
     position: relative;
+    top: -90px;
     width: 300px;
     margin: 80px auto;
     padding: 20px 40px 40px;
     text-align: center;
     background: #fff;
     border: 1px solid #ccc;
+    border-radius: 10px;
 }
 
-
-/* Efecto de varias cartas */
-.login-container::before,.login-container::after{
-    content: "";
-    position: absolute;
-    width: 100%;height: 100%;
-    top: 3.5px;left: 0;
-    background: #fff;
-    z-index: -1;
-    -webkit-transform: rotateZ(4deg);
-    -moz-transform: rotateZ(4deg);
-    -ms-transform: rotateZ(4deg);
-    border: 1px solid #ccc;
-
-}
-
-/*Segundo efecto de varias cartas  */
-.login-container::after{
-    top: 5px;
-    z-index: -2;
-    -webkit-transform: rotateZ(-2deg);
-     -moz-transform: rotateZ(-2deg);
-      -ms-transform: rotateZ(-2deg);
-
-}
-
-/* Imagen de usuario */
-.avatar{
-    overflow: hidden;
-    width: 100px;height: 100px;
-    margin: 10px auto 30px;
-    border-radius: 100%;
-    border: 2px solid #aaa;
-    background-size: cover;
+/* Título de sign */
+.wm_signin_titulo{
+    font-family: 'Concert One', cursive;
+    font-size: 30px;
+    margin: 0 0 10px 0;
 }
 
 /* Input de formulario */
@@ -98,7 +71,7 @@ html,body{
     text-align: center;
     height:40px;
     border: 1px solid #ccc;;
-    background: #fafafa;
+    background: rgba(250, 250, 250);
     transition:0.2s ease-in-out;
     font-size: 1em;
 }
@@ -124,14 +97,16 @@ html,body{
 /* Ocultar y mostrar password */
 #eye-pass{
     position: absolute;
-    right: 90px;
+    right: 70px;
+    top: 100px;
     transform: translate(0, 100%);
     cursor: pointer;
 }
 
 #eye-pass-hidden{
     position: absolute;
-    right: 90px;
+    right: 70px;
+    top: 100px;
     transform: translate(0, 100%);
     cursor: pointer;
     display: none;
@@ -139,10 +114,16 @@ html,body{
 
 
 /* Botón de login */
+
+.wm_signin_button{
+ justify-content: center;
+}
+
 .form-box button.login{
     width: 200px;
     margin-top:15px;
     padding: 10px 20px;
+    color:#fff;
     background-color: #27EC35;
     border: #27EC35 solid;
     border-radius: 5px;
@@ -154,10 +135,13 @@ html,body{
     cursor: pointer;
     background-color: #1AC126;
     border: #1AC126 solid;
-    color: #fff;
+    color: #000;
 }
 
-
+/* Registrarse */
+.wm_signin_registro{
+    margin: 10px 0 0 0;
+}
 
 @-webkit-keyframes fadeInUp {
   0% {
