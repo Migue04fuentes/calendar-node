@@ -7,25 +7,22 @@
     font-style: normal;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+  
 html {
     position: relative;
     min-height: 100%;
 }
 
 body {
-    display: flex;
+    padding-top: 80px;
+    margin-bottom: 60px;
+    /* display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
     padding-top: 80px;
     margin-bottom: 60px;
-    background-color: aliceblue;
+    background-color: aliceblue; */
 }
 
 

@@ -35,7 +35,7 @@ app.use(flash());
 //Variables globales
 app.use((req, res, next) => {
     res.locals.user_msg = req.flash('user_msg');
-    // res.locals.usererr_msg = req.flash('usererr_msg');
+    res.locals.usererr_msg = req.flash('usererr_msg');
     next();
 });
 

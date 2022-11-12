@@ -7,7 +7,8 @@ const userSchema = new Schema({
     },
     n_documento:{
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     nombre:{
         type: String,

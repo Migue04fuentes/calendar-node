@@ -17,21 +17,21 @@
             </div>
             <div class="wm_signup_input">
                 <label class="wm_signup_label" for="wm_signup_cedula">Nro. Documento:</label>
-                <input type="text" name="wm_signup_cedula" id="wm_signup_cedula" placeholder="Cédula" required="">
+                <input type="text" name="wm_signup_cedula" id="wm_signup_cedula" placeholder="Cédula" required="" value="{{wm_signup_cedula}}">
             </div>
             <div class="wm_signup_input">
                 <label class="wm_signup_label" for="wm_signup_nombre">Nombres:</label>
                 <input type="text" name="wm_signup_nombre" id="wm_signup_nombre" placeholder="Primer nombre"
-                    required="">
+                    required="" value="{{wm_signup_nombre}}">
             </div>
             <div class="wm_signup_input">
                 <label class="wm_signup_label" for="wm_signup_apellido">Apellidos:</label>
                 <input type="text" name="wm_signup_apellido" id="wm_signup_apellido" placeholder="Primer nombre"
-                    required="">
+                    required="" value="{{wm_signup_apellido}}">
             </div>
             <div class="wm_signup_input">
                 <label class="wm_signup_label" for="wm_sign_up">Télefono:</label>
-                <input type="text" name="wm_signup_telefono" id="wm_signup_telefono" placeholder="Teléfono" required="">
+                <input type="text" name="wm_signup_telefono" id="wm_signup_telefono" placeholder="Teléfono" required="" value="{{wm_signup_telefono}}">
             </div>
             <div class="wm_signup_input">
                 <label class="wm_signup_label" for="wm_signup_aseguradora">Aseguradora:</label>
@@ -62,7 +62,8 @@
                 <option value="cirugia">cirugia</option>
             </select>
         </div>
-        <div>{{>messageserr}}</div>
+        
+        <div>{{>messageserr}}{{>messages}}</div>
         <div class="wm_signup_button">
             <button>Registrarse</button>
         </div>
