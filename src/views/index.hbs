@@ -1,15 +1,16 @@
-
 <div class="container">
     {{!-- Login --}}
     <div class="login-container">
+        {{!-- Mensajes con connect-flash --}}
         {{>messages}}{{>messageserr}}
         <div class="wm_signin_titulo">
             <span>Login</span>
         </div>
         <div class="form-box">
             <form action="/login" method="post">
-                <input type="text" name="user_login" id="user_login" maxlength="15" placeholder="cédula">
-                <input type="password" name="password_login" id="password_login" maxlength="4" placeholder="password">
+                <input type="text" name="user_login" id="user_login" maxlength="15" placeholder="cédula" required="">
+                <input type="password" name="password_login" id="password_login" maxlength="4" placeholder="password"
+                    required="">
                 <span id="eye-pass">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-eye-slash" viewBox="0 0 16 16">
@@ -44,45 +45,9 @@
         </div>
     </div>
 </div>
-<script>
-    // Validación de solo números
-    function soloNumeros(e) {
-        var key = e.charCode;
-        return key >= 48 && key <= 57;
-    }
-
-    //Solo números en usuario
-    let input_user = document.getElementById('user-login');
-    input_user.addEventListener('keypress', function (e) {
-        if (!soloNumeros(event)) {
-            e.preventDefault();
-        }
-    });
-
-    // Solo número en password
-    let input_password = document.getElementById('password-login');
-    input_password.addEventListener('keypress', function (e) {
-        if (!soloNumeros(event)) {
-            e.preventDefault();
-        }
-    });
-
-    // Mostrar contraseña
-    let eyepass = document.getElementById('eye-pass');
-    let eyepasshd = document.getElementById('eye-pass-hidden');
-    eyepass.addEventListener('click', function () {
-        eyepass.style.display = "none";
-        eyepasshd.style.display = "inline";
-
-        // input del password
-        input_password.setAttribute('type', 'text');
-
-    });
-    eyepasshd.addEventListener('click', function () {
-        eyepass.style.display = "inline-block";
-        eyepasshd.style.display = "none";
-
-        //input del password
-        input_password.setAttribute("type", "password");
-    });
-</script>
+{{!-- bootstrap --}}
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+{{!-- archivos propios --}}
+<script src="/js/jssignin/signin.js"></script>

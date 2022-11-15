@@ -72,10 +72,15 @@ userCtrl.signincheck = passport.authenticate('local',{
 
 //Cerrar sesión
 userCtrl.logout = (req, res) => {
-    req.logout();
-    req.flash('user_msg', 'La sesión ha sido cerrada.');
-    res.redirect('/');
+    req.logout(function(err) {
+        if (err) { return next(err); }
+        req.flash('user_msg', 'Sesión Cerrada.');
+        res.redirect('/');
+      });
 }
+
+
+
 
 // Exportaciones
 module.exports = userCtrl;

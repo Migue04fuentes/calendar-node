@@ -274,6 +274,11 @@ form .wm_signup_form .wm_signup_input{
     margin: 0;
 }
 
+/* Mensajes de error */
+#usererr_msg{
+    color: red;
+}
+
 /* Botón del formulario */
 form .wm_signup_button{
     height: 45px;
