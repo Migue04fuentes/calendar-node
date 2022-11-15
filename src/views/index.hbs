@@ -1,13 +1,15 @@
+
 <div class="container">
     {{!-- Login --}}
     <div class="login-container">
+        {{>messages}}{{>messageserr}}
         <div class="wm_signin_titulo">
             <span>Login</span>
         </div>
         <div class="form-box">
-            <form action="/" method="post">
-                <input type="text" name="user-login" id="user-login" maxlength="15" placeholder="cédula">
-                <input type="password" name="password-login" id="password-login" maxlength="4" placeholder="password">
+            <form action="/login" method="post">
+                <input type="text" name="user_login" id="user_login" maxlength="15" placeholder="cédula">
+                <input type="password" name="password_login" id="password_login" maxlength="4" placeholder="password">
                 <span id="eye-pass">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-eye-slash" viewBox="0 0 16 16">

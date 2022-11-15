@@ -7,25 +7,22 @@
     font-style: normal;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+  
 html {
     position: relative;
     min-height: 100%;
 }
 
 body {
-    display: flex;
+    padding-top: 80px;
+    margin-bottom: 60px;
+    /* display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
     padding-top: 80px;
     margin-bottom: 60px;
-    background-color: aliceblue;
+    background-color: aliceblue; */
 }
 
 
@@ -188,6 +185,7 @@ html,body{
     background-color: #fff;
     padding: 25px 30px;
     border-radius: 5px;
+    margin: 0 auto;
 }
 
 /* título */
@@ -262,6 +260,18 @@ form .wm_signup_form .wm_signup_input{
     width: 20vh;
     border: 1px solid #aaa;
     border-radius: 5px;
+}
+
+/* subtítulo de primera cita */
+.wm_signup_subtitulo{
+    font-family: 'Concert One', cursive;
+    font-size: 1.3em;
+    border-bottom: 1px solid #000;
+    margin-bottom: 15px;
+}
+
+.wm_signup_subtitulo p{
+    margin: 0;
 }
 
 /* Botón del formulario */

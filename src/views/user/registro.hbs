@@ -17,21 +17,29 @@
             </div>
             <div class="wm_signup_input">
                 <label class="wm_signup_label" for="wm_signup_cedula">Nro. Documento:</label>
+
                 <input type="text" name="wm_signup_cedula" id="wm_signup_cedula" value="{{wm_signup_cedula}}" placeholder="Cédula" required="">
             </div>
             <div class="wm_signup_input">
                 <label class="wm_signup_label" for="wm_signup_nombre">Nombres:</label>
                 <input type="text" name="wm_signup_nombre" id="wm_signup_nombre" value="{{wm_signup_nombre}}" placeholder="Primer nombre"
                     required="">
+
+                <input type="text" name="wm_signup_cedula" id="wm_signup_cedula" placeholder="Cédula" required="" value="{{wm_signup_cedula}}">
+            </div>
+            <div class="wm_signup_input">
+                <label class="wm_signup_label" for="wm_signup_nombre">Nombres:</label>
+                <input type="text" name="wm_signup_nombre" id="wm_signup_nombre" placeholder="Primer nombre"
+                    required="" value="{{wm_signup_nombre}}"
             </div>
             <div class="wm_signup_input">
                 <label class="wm_signup_label" for="wm_signup_apellido">Apellidos:</label>
                 <input type="text" name="wm_signup_apellido" id="wm_signup_apellido" placeholder="Primer nombre"
-                    required="">
+                    required="" value="{{wm_signup_apellido}}">
             </div>
             <div class="wm_signup_input">
                 <label class="wm_signup_label" for="wm_sign_up">Télefono:</label>
-                <input type="text" name="wm_signup_telefono" id="wm_signup_telefono" placeholder="Teléfono" required="">
+                <input type="text" name="wm_signup_telefono" id="wm_signup_telefono" placeholder="Teléfono" required="" value="{{wm_signup_telefono}}">
             </div>
             <div class="wm_signup_input">
                 <label class="wm_signup_label" for="wm_signup_aseguradora">Aseguradora:</label>
@@ -53,6 +61,9 @@
                     maxlength="4" placeholder="Confirmar contraseña" required="Password">
             </div>
         </div>
+        <div class="wm_signup_subtitulo">
+            <p>Primera cita</p>
+        </div>
         <div class="wm_signup_input">
             <label class="wm_signup_label" for="wm_signup_especialidad">Especialidad:</label>
             <select name="wm_signup_especialidad" id="wm_signup_aseguradora">
@@ -62,9 +73,11 @@
                 <option value="cirugia">cirugia</option>
             </select>
         </div>
-        <div>{{>messageserr}}</div>
+        
+        <div>{{>messageserr}}{{>messages}}</div>
         <div class="wm_signup_button">
             <button>Registrarse</button>
         </div>
     </form>
 </div>
+<script src="/js/jssignup/signup.js"></script>

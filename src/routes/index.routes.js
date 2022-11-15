@@ -13,6 +13,9 @@ router.get('/', renderIndex);
 
 router.post('/', newagenda);
 
+//Ingreso exitosos en login
+router.get('/calendar', newagenda);
+
 router.get('/allcitas', rendercitas);
 
 
