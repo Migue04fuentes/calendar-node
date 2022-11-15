@@ -6,10 +6,12 @@ const path = require('path');
 const morgan = require('morgan');  //Ver peticiones que llegan al servidor
 const flash = require('connect-flash');//Definir mensajes
 const session = require('express-session');//Lugar donde se guardaran los mensajes 
+const passport = require('passport');
 
 //Inicialización
 //servidor
 const app = express();
+require('./config/passport');
 
 //Configuraciones 
 app.set('port', process.env.PORT || 4000);
@@ -30,12 +32,16 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }));
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(flash());
 
 //Variables globales
 app.use((req, res, next) => {
     res.locals.user_msg = req.flash('user_msg');
     res.locals.usererr_msg = req.flash('usererr_msg');
+    res.locals.error = req.flash('error');
+    res.locals.user = req.user || null;
     next();
 });
 

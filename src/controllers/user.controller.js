@@ -3,6 +3,9 @@ const { response, render } = require("../server");
 // Objeto donde se guardaran las funciones
 const userCtrl = {};
 
+//Importación de passport
+const passport = require('passport');
+
 // Importación del modelo
 const User = require('../models/user');
 
@@ -47,9 +50,10 @@ userCtrl.saveregistro = async (req, res) => {
                 n_documento: wm_signup_cedula,
                 nombre: wm_signup_nombre,
                 apellido: wm_signup_apellido,
-                telefono: wm_signup_telefono
+                telefono: wm_signup_telefono,
+                password: wm_signup_password
             });
-            console.log(usuario);
+            usuario.password = await usuario.encryptPassword(wm_signup_password);
             await usuario.save();
             req.flash('user_msg', 'Registro Exitoso');
             res.redirect('/');
@@ -63,13 +67,17 @@ userCtrl.signinform = (req, res) => {
 }
 
 //Inicio de sesión
-userCtrl.signincheck = (req, res) => {
-    res.send('Check of login');
-}
+userCtrl.signincheck = passport.authenticate('local',{
+    failureRedirect: '/',
+    successRedirect: '/calendar',
+    failureFlash: true
+});
 
 //Cerrar sesión
 userCtrl.logout = (req, res) => {
-    res.send('He left his session');
+    req.logout();
+    req.flash('user_msg', 'La sesión ha sido cerrada.');
+    res.redirect('/');
 }
 
 // Exportaciones

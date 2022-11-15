@@ -185,6 +185,7 @@ html,body{
     background-color: #fff;
     padding: 25px 30px;
     border-radius: 5px;
+    margin: 0 auto;
 }
 
 /* título */
@@ -259,6 +260,18 @@ form .wm_signup_form .wm_signup_input{
     width: 20vh;
     border: 1px solid #aaa;
     border-radius: 5px;
+}
+
+/* subtítulo de primera cita */
+.wm_signup_subtitulo{
+    font-family: 'Concert One', cursive;
+    font-size: 1.3em;
+    border-bottom: 1px solid #000;
+    margin-bottom: 15px;
+}
+
+.wm_signup_subtitulo p{
+    margin: 0;
 }
 
 /* Botón del formulario */
