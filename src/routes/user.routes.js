@@ -8,7 +8,8 @@ renderregistro,
 saveregistro,
 signinform,
 signincheck,
-logout
+logout,
+users
 } = require('../controllers/user.controller');
 
 // renderizado al formulario
@@ -25,5 +26,8 @@ router.post('/login', signincheck);
 
 //Salir de la sesión
 router.get('/user/logout', logout);
+
+//Listado de usuarios
+router.get('/usuarios', users);
 
 module.exports = router; 

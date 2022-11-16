@@ -77,7 +77,13 @@ userCtrl.logout = (req, res) => {
         req.flash('user_msg', 'Sesión Cerrada.');
         res.redirect('/');
       });
+};
+
+userCtrl.users = async (req, res) => {
+    const usuarios = await User.find();
+    res.send(usuarios);
 }
+
 
 
 

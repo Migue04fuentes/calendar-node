@@ -21,8 +21,9 @@ agendaCtrl.newcita = async (req, res) => {
 };
 
 // Función de mostra todas las citas
-agendaCtrl.rendercitas = (req, res) => {
-    res.send('Todas las citas');
+agendaCtrl.rendercitas = async (req, res) => {
+    const citas = await agenda.find();
+    res.send(citas);
 };
 
 //Función para editar citas
