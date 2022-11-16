@@ -8,21 +8,22 @@ const agenda = require('../models/agendas');
 
 //Función del formulario de agenda
 agendaCtrl.agendaform = (req, res) => {
-    // res.send('agenda formulario');
-    res.render('index');
+    res.render('calendario/calendar');
 };
 
 // Función de guardar new cita
 agendaCtrl.newcita = async (req, res) => {
     const { namedoctor, description, fecha, hora } = req.body;
     const newagenda = new agenda({ title: namedoctor, description, fecha: fecha, hora });
+    newagenda.usuario = req.user.id;
     await newagenda.save();
     res.render('calendario/calendar');
 };
 
 // Función de mostra todas las citas
 agendaCtrl.rendercitas = async (req, res) => {
-    const citas = await agenda.find();
+    // const citas = await agenda.find();
+    const citas = await agenda.find({usuario: req.user.id});
     res.send(citas);
 };
 

@@ -11,9 +11,10 @@ const {
     deletecita 
 } = require('../controllers/agenda.controller');
 
+const {isAuthenticated} = require('../helpers/auth');
 
 //Agregar cita
-router.get('/agenda/add', agendaform);
+router.get('/calendar',isAuthenticated, agendaform);
 
 router.post('/newcita', newcita);
 

@@ -1,11 +1,11 @@
 // Definicón del modelo de datos
-const {Schema, model} = require('mongoose');
+const { Schema, model } = require('mongoose');
 
 
 // Esquema de guardado de datos
 const agendaschema = new Schema({
     title: {
-        type :String,
+        type: String,
         required: true
     },
     description: {
@@ -19,9 +19,13 @@ const agendaschema = new Schema({
     hora: {
         type: String,
         required: true
+    },
+    usuario: {
+        type: String,
+        required: true
     }
-},{
- //   timestamps: true   //fecha de creación y actulización
-})  
+}, {
+    //   timestamps: true   //fecha de creación y actulización
+})
 
 module.exports = model('Agenda', agendaschema);

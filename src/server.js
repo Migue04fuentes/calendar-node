@@ -46,6 +46,7 @@ app.use((req, res, next) => {
 });
 
 //Rutas
+app.use(require('./routes/index.routes'));
 app.use(require('./routes/agenda.routes'));
 app.use(require('./routes/user.routes'));
 //Archivos Estáticos
