@@ -13,8 +13,8 @@ agendaCtrl.agendaform = (req, res) => {
 
 // Función de guardar new cita
 agendaCtrl.newcita = async (req, res) => {
-    const { namedoctor, description, fecha, hora } = req.body;
-    const newagenda = new agenda({ title: namedoctor, description, fecha: fecha, hora });
+    const { namedoctor, description,fecha, hora } = req.body;
+    const newagenda = new agenda({ title: namedoctor, description, start: fecha, hora });
     newagenda.usuario = req.user.id;
     await newagenda.save();
     res.render('calendario/calendar');
@@ -43,3 +43,9 @@ agendaCtrl.deletecita = (req, res) => {
 
 // Exportaciones
 module.exports = agendaCtrl;
+
+exports.citas;
+
+
+
+

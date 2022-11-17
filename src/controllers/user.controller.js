@@ -31,7 +31,12 @@ userCtrl.saveregistro = async (req, res) => {
     }
     if(messageserr.length > 0){
         res.render('user/registro',{
-        messageserr});
+        messageserr,
+        wm_signup_cedula,
+        wm_signup_nombre, 
+        wm_signup_apellido,
+        wm_signup_telefono
+    });
     }
     else {
         const cedulauser = await User.findOne({ n_documento: wm_signup_cedula });

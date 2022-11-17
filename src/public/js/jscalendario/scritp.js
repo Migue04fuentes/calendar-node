@@ -1,3 +1,8 @@
+// importación de todas las citas para mostrar en el calendario
+import citas from '/agenda' assert{ type: "json"};
+console.log(citas);
+
+
 
 function addZero(i) {
     if (i < 10) {
@@ -35,8 +40,59 @@ $(document).ready(function () {
         buttonIcons: true, // show the prev/next text
         weekNumbers: false,
         editable: true,
-        eventLimit: true, // allow "more" link when too many events 
-        events: [
+        eventLimit: true, // allow "mo,re" link when too many events 
+        events: citas,
+        //Click para agregar cita
+        dayClick: function (date, jsEvent, view) {
+            $('#exampleModal').modal('show');
+            // console.log(date.format());
+            // console.log(date);
+
+            //Fecha
+            let fechaparcial = date.format().substr(0, 10);
+
+
+            //Hora Inicial
+            let hora = date.hour();
+            let min = date.minutes();
+            if (hora < 10) {
+                hora = '0' + hora;
+            }
+            if (min < 10) {
+                min = '0' + min;
+            }
+            let horainicial = hora + ':' + min;
+            document.getElementById('fecha').value = fechaparcial;// alert('Has hecho click en: ' + date.format());
+            document.getElementById('hora').value = horainicial;
+        },
+        //click en cita asignada
+        eventClick: function (calEvent, jsEvent, view) {
+            $('#event-title').text(calEvent.title);
+            $('#event-description').html(calEvent.description);
+            $('#modal-event').modal();
+        },
+    });
+});
+
+let btnguardarcita = document.getElementById("btn_guardar_cita");
+let lista = [];
+
+btnguardarcita.addEventListener("click", function () {
+    let inputdoctor = document.getElementById('namedoctor').value;
+    let inputdescription = document.getElementById('description').value;
+    let fecha = document.getElementById('fecha').value;
+    lista.push({
+        title: inputdoctor,
+        description: inputdescription,
+        start: fecha
+    });
+    console.log(lista);
+});
+
+
+
+/*
+[
             {
                 title: 'All Day Event',
                 description: 'Lorem ipsum 1...',
@@ -131,51 +187,5 @@ $(document).ready(function () {
                 color: '#3A87AD',
                 textColor: '#ffffff',
             }
-        ],
-        //Click para agregar cita
-        dayClick: function (date, jsEvent, view) {
-            $('#exampleModal').modal('show');
-            // console.log(date.format());
-            // console.log(date);
-
-            //Fecha
-            let fechaparcial = date.format().substr(0, 10);
-            
-
-            //Hora Inicial
-            let hora = date.hour();
-            let min = date.minutes();
-            if (hora < 10) {
-                hora = '0' + hora;
-            }
-            if (min < 10) {
-                min = '0' + min;
-            }
-            let horainicial = hora + ':' + min;
-            document.getElementById('fecha').value = fechaparcial;// alert('Has hecho click en: ' + date.format());
-            document.getElementById('hora').value = horainicial;
-        },
-        //click en cita asignada
-        eventClick: function (calEvent, jsEvent, view) {
-            $('#event-title').text(calEvent.title);
-            $('#event-description').html(calEvent.description);
-            $('#modal-event').modal();
-        },
-    });
-});
-
-let btnguardarcita = document.getElementById("btn_guardar_cita");
-let lista = [];
-
-btnguardarcita.addEventListener("click", function () {
-    let inputdoctor = document.getElementById('namedoctor').value;
-    let inputdescription = document.getElementById('description').value;
-    let fecha = document.getElementById('fecha').value;
-    lista.push({
-        title: inputdoctor,
-        description: inputdescription,
-        start: fecha
-    });
-    console.log(lista);
-});
-
+        ]
+*/

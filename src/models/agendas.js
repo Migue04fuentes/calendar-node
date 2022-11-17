@@ -12,7 +12,7 @@ const agendaschema = new Schema({
         type: String,
         required: true
     },
-    fecha: {
+    start: {
         type: String,
         required: 'required fecha'
     },
