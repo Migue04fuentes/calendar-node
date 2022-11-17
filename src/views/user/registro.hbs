@@ -58,7 +58,7 @@
         </div>
         <div class="wm_signup_input">
             <label class="wm_signup_label" for="wm_signup_especialidad">Especialidad:</label>
-            <select name="wm_signup_especialidad" id="wm_signup_aseguradora">
+            <select name="wm_signup_especialidad" id="wm_signup_especialidad">
                 <option value="Optometria">Optometría</option>
                 <option value="Oftalmologia">Oftalmología</option>
                 <option value="ortopedia">Ortopedia</option>
@@ -66,7 +66,7 @@
             </select>
         </div>
         {{!-- mensajes de error --}}
-        <div>{{>messageserr}}{{>messages}}</div>
+        <div id="usererr_msg">{{>messageserr}}{{>messages}}</div>
         <div class="wm_signup_button">
             <button>Registrarse</button>
         </div>

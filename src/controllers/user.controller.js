@@ -24,12 +24,10 @@ userCtrl.saveregistro = async (req, res) => {
         wm_signup_confirmpass } = req.body;
 
     if (wm_signup_password != wm_signup_confirmpass) {
-        messageserr.push({text:'Las contraseñas no coinciden'});
-        res.redirect('registro');
+        messageserr.push({text:'¡Las contraseñas no coinciden!'});
     }
     if (wm_signup_password.length != 4) {
         messageserr.push({text: '¡La longitud de las contraseñas no hes la indicada!'});
-            res.redirect('registro');
     }
     if(messageserr.length > 0){
         res.render('user/registro',{
