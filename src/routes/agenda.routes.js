@@ -19,7 +19,7 @@ router.get('/calendar',isAuthenticated, agendaform);
 router.post('/newcita', newcita);
 
 //mostrar todas la citas
-router.get('/agenda', rendercitas);
+router.get('/agenda', isAuthenticated, rendercitas);
 
 //Editar Citas
 router.get('/agenda/edit/:id', editcitas); 
