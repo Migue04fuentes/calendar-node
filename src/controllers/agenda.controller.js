@@ -14,7 +14,8 @@ agendaCtrl.agendaform = (req, res) => {
 // Función de guardar new cita
 agendaCtrl.newcita = async (req, res) => {
     const { namedoctor, description,fecha, hora } = req.body;
-    const newagenda = new agenda({ title: namedoctor, description, start: fecha, hora });
+    const start = fecha+'T'+hora+':00';
+    const newagenda = new agenda({ title: namedoctor, description, start: start, hora });
     newagenda.usuario = req.user.id;
     await newagenda.save();
     res.render('calendario/calendar');

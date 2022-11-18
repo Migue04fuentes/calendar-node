@@ -1,11 +1,11 @@
 // importación de todas las citas para mostrar en el calendario
 import citas from '/agenda' assert{ type: "json"};
-
-for(const citas2 of citas){
-console.log(citas2);
-}
-let cont = citas[0].fecha;
-console.log(cont);
+console.log(citas);
+// for(const citas2 of citas){
+// console.log(citas2);
+// }
+// let cont = citas[0].fecha;
+// console.log(cont);
 function addZero(i) {
     if (i < 10) {
         i = '0' + i;
