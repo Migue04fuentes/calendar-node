@@ -10,6 +10,7 @@
             <div class="wm_signup_input">
                 <label class="wm_signup_label" for="wm_signup_tdocument">Tipo de documento</label>
                 <select name="wm_signup_tdocument" id="wm_signup_tdocument">
+                    <option value=""></option>
                     <option value="cedula">Cédula</option>
                     <option value="tarjeta-identidad">Tarjeta de Identidad</option>
                     <option value="registro">Registro</option>
@@ -30,8 +31,22 @@
                     required="" value="{{wm_signup_apellido}}">
             </div>
             <div class="wm_signup_input">
-                <label class="wm_signup_label" for="wm_sign_up">Télefono:</label>
+                <label class="wm_signup_label" for="wm_signup_telefono">Télefono:</label>
                 <input type="text" name="wm_signup_telefono" id="wm_signup_telefono" placeholder="Teléfono" required="" value="{{wm_signup_telefono}}">
+            </div>
+            <div class="wm_signup_input">
+                <label class="wm_signup_label" for="wm_signup_telefono2">Télefono 2:</label>
+                <input type="text" name="wm_signup_telefono2" id="wm_signup_telefono2" placeholder="Teléfono 2" required="" value="{{wm_signup_telefono}}">
+            </div>
+            <div class="wm_signup_input">
+                <label class="wm_signup_label" for="wm_signup_email">Email:</label>
+                <input type="text" name="wm_signup_email" id="wm_signup_email" placeholder="Email"
+                    required="" value="">
+            </div>
+            <div class="wm_signup_input">
+                <label class="wm_signup_label" for="wm_signup_fechanacimiento">Fecha de Nacimiento:</label>
+                <input type="date" name="wm_signup_fechanacimiento" id="wm_signup_fechanacimiento" placeholder="Primer nombre"
+                    required="" value="">
             </div>
             <div class="wm_signup_input">
                 <label class="wm_signup_label" for="wm_signup_aseguradora">Aseguradora:</label>
@@ -53,7 +68,7 @@
                     maxlength="4" placeholder="Confirmar contraseña" required="Password">
             </div>
         </div>
-        <div class="wm_signup_subtitulo">
+        {{!-- <div class="wm_signup_subtitulo">
             <p>Primera cita</p>
         </div>
         <div class="wm_signup_input">
@@ -64,7 +79,7 @@
                 <option value="ortopedia">Ortopedia</option>
                 <option value="cirugia">cirugia</option>
             </select>
-        </div>
+        </div> --}}
         {{!-- mensajes de error --}}
         <div id="usererr_msg">{{>messageserr}}{{>messages}}</div>
         <div class="wm_signup_button">
