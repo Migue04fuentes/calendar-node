@@ -18,12 +18,13 @@
             </div>
             <div class="wm_signup_input">
                 <label class="wm_signup_label" for="wm_signup_cedula">Nro. Documento:</label>
-                <input type="text" name="wm_signup_cedula" id="wm_signup_cedula" placeholder="Cédula" required="" value="{{wm_signup_cedula}}">
+                <input type="text" name="wm_signup_cedula" id="wm_signup_cedula" placeholder="Cédula" required=""
+                    value="{{wm_signup_cedula}}">
             </div>
             <div class="wm_signup_input">
                 <label class="wm_signup_label" for="wm_signup_nombre">Nombres:</label>
-                <input type="text" name="wm_signup_nombre" id="wm_signup_nombre" placeholder="Primer nombre"
-                    required="" value="{{wm_signup_nombre}}">
+                <input type="text" name="wm_signup_nombre" id="wm_signup_nombre" placeholder="Primer nombre" required=""
+                    value="{{wm_signup_nombre}}">
             </div>
             <div class="wm_signup_input">
                 <label class="wm_signup_label" for="wm_signup_apellido">Apellidos:</label>
@@ -32,16 +33,17 @@
             </div>
             <div class="wm_signup_input">
                 <label class="wm_signup_label" for="wm_signup_telefono">Télefono:</label>
-                <input type="text" name="wm_signup_telefono" id="wm_signup_telefono" placeholder="Teléfono" required="" value="{{wm_signup_telefono}}">
+                <input type="text" name="wm_signup_telefono" id="wm_signup_telefono" placeholder="Teléfono" required=""
+                    value="{{wm_signup_telefono}}">
             </div>
             <div class="wm_signup_input">
                 <label class="wm_signup_label" for="wm_signup_telefono2">Télefono 2:</label>
-                <input type="text" name="wm_signup_telefono2" id="wm_signup_telefono2" placeholder="Teléfono 2" required="" value="{{wm_signup_telefono}}">
+                <input type="text" name="wm_signup_telefono2" id="wm_signup_telefono2" placeholder="Teléfono 2"
+                    required="" value="{{wm_signup_telefono}}">
             </div>
             <div class="wm_signup_input">
                 <label class="wm_signup_label" for="wm_signup_email">Email:</label>
-                <input type="text" name="wm_signup_email" id="wm_signup_email" placeholder="Email"
-                    required="" value="">
+                <input type="text" name="wm_signup_email" id="wm_signup_email" placeholder="Email" required="" value="">
             </div>
             <div class="wm_signup_input">
                 <label class="wm_signup_label" for="wm_signup_aseguradora">Aseguradora:</label>
@@ -52,19 +54,25 @@
                     <option value="colsanitas">colsanitas</option>
                 </select>
             </div>
-            <div class="wm_signup_radio" style="display:inline;">
+            <div class="wm_signup_radio" style="display: block !important;">
                 <label class="wm_signup_label">Elija su sexo</label>
-                <p>Masculino</p>
-                <input type="radio" name="masculino" value="masculino">
-                <p>Femenino</p>
-                <input type="radio" name="femenino" value="femenino">
-                <p>Otro</p>
-                <input type="radio" name="otro" value="otro">
+                <div style="display: flex !important">
+                    <p>Masculino</p>
+                    <input type="radio" name="sexo" value="masculino">
+                    <p>Femenino</p>
+                    <input type="radio" name="sexo" value="femenino">
+                    <p>Otro</p>
+                    <input type="radio" name="sexo" value="otro">
+                </div>
             </div>
             <div class="wm_signup_input">
                 <label class="wm_signup_label" for="wm_signup_fechanacimiento">Fecha de Nacimiento:</label>
-                <input type="date" name="wm_signup_fechanacimiento" id="wm_signup_fechanacimiento" placeholder="Primer nombre"
-                    required="" value="">
+                <input type="date" name="wm_signup_fechanacimiento" id="wm_signup_fechanacimiento"
+                    placeholder="Primer nombre" required="">
+            </div>
+            <div class="wm_signup_input">
+                <label class="wm_signup_label" for="wm_signup_direccion">Dirección</label>
+                <input type="text" name="wm_signup_direccion" id="wm_signup_direccion" placeholder="Dirección" required="">
             </div>
             <div class="wm_signup_input">
                 <label class="wm_signup_label" for="wm_sign_up">Contraseña:</label>
@@ -97,3 +105,4 @@
     </form>
 </div>
 <script src="/js/jssignup/signup.js"></script>
+{{!-- https://codingpotions.com/input-autocompletado-javascript --}}
