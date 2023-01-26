@@ -44,6 +44,17 @@ $(document).ready(function () {
         editable: true,
         eventLimit: true, // allow "mo,re" link when too many events 
         events: citas,
+                title: 'All Day Event',
+                description: 'Lorem ipsum 1...',
+                start: yyyy + '-' + mm + '-01',
+                color: '#3A87AD',
+                textColor: '#ffffff',
+            
+        minTime: '06:00:00',
+        maxTime: '18:00:00',
+        slotDuration: '00:15:00',
+        // slotLabelInterval: 15,
+        slotLabelFormat: 'h(:mm)a',
         //Click para agregar cita
         dayClick: function (date, jsEvent, view) {
             $('#exampleModal').modal('show');
